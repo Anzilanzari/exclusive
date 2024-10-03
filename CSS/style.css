@@ -822,3 +822,15 @@ color:rgba(255,255,255,.4)
     .stars .empty-star {
     color: lightgray; /* Makes the empty stars light gray */
     }
+    .top-left-image {
+        position: absolute;
+        top: 10px; /* Align to the top */
+        left: 10px; /* Align to the left */
+        z-index: 10; /* Ensure it is above the product image */
+    }
+    
+    .top-left-img {
+        width: 56px;
+        height: auto;
+    }
+    

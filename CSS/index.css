@@ -77,3 +77,9 @@ border-bottom: 1px solid white;
 .apple-png{
     border-radius: 10px;
 }
+.product-container {
+    position: relative; /* Ensure the container is the reference for the positioning */
+    display: inline-block;
+    /* Other styles as needed */
+}
+
