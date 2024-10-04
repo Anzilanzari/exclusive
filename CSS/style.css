@@ -834,3 +834,56 @@ color:rgba(255,255,255,.4)
         height: auto;
     }
     
+
+    /* special card */
+    .pricing {
+        display: flex; /* Use flexbox to align items in a row */
+        align-items: center; /* Vertically center the items */
+        margin-bottom: 5px; /* Space below pricing section */
+    }
+    
+    .new-price {
+        margin-right: 10px;
+        font-family: "poppins";
+        font-weight: 500;
+        color: #DB4444;
+    }
+    
+    .old-price-wrapper {
+        position: relative; /* Position for the line effect */
+    }
+    
+    .old-price-line {
+        border: none; /* Remove default border */
+        position: absolute; /* Absolute position for the line */
+        top: -10px; /* Adjust this value to position the line */
+        left: 0; /* Align the line to the left */
+        width: 100%; /* Full width line */
+    }
+    
+    .old-price {
+        text-decoration: line-through;
+        color: rgb(136, 134, 134);
+        font-size: 17px;
+        font-family: "poppins";
+    }
+    
+    .rating {
+        margin-top: 5px; /* Add space above rating and reviews */
+    }
+    
+    .review {
+        margin-top: 2px; /* Add space above reviews */
+    }
+    .product-grid {
+        display: flex; /* Use Flexbox for layout */
+        flex-wrap: wrap; /* Allow wrapping of cards to the next line */
+        justify-content: space-between; /* Space between cards */
+        margin: 0 -10px; /* Adjust margin for card spacing */
+    }
+    
+    .product-item {
+        flex: 1 1 calc(25% - 20px); /* Set each card to take 25% of the width minus margin */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+        margin: 10px; /* Margin between cards */
+    }
