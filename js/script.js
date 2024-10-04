@@ -17,8 +17,7 @@ const categories = [
         reviews: 35,
         img: "../Assets/cesar.png",
         category: "Pets",
-        smallImg: "../Assets/small-dog.png", // Small image
-        topLeftImg: "../Assets/new-badge.png" // Top-left image (e.g., a badge for new products)
+      
     },
     {
         name: "CANON EOS DSLR Camera",
@@ -34,11 +33,58 @@ const categories = [
         price: "$700",
         rating: 5,
         reviews: 325,
-        img: "../assets/Frame 604.svg",
+        img: "../assets/Frame 604.svg" ,
         category: "Computers",
-        smallImg: "../Assets/yellow and red.png", // Small image
-        topLeftImg: "../Assets/New Button.png" // Example top-left image for this product
-    }
+    },
+    {
+      name: "Curology Product Set",
+      price: "$500",
+      rating: 4,
+      reviews: 325,
+      img: "../assets/curology.png",
+      category: "Cream",
+  },
+  {
+    name: "Kids Eletric Car",
+    price: "$960",
+    rating: 5,
+    reviews: 65,
+    img: "../assets/Electric car.png",
+    category: "toy",
+    smallImg: "../Assets/red and red.png", // Small image
+    topLeftImg: "../Assets/New Button.png" // Example top-left image for this product
+},
+{
+  name: "Jr.Zoom Scoccer Cleats",
+  price: "$1160",
+  rating: 5,
+  reviews: 35,
+  img: "../assets/Zoom Soccer.png",
+  category: "boots",
+  smallImg: "../Assets/yellow and red.png", // Small image
+  topLeftImg: "../Assets/New Button.png" // Example top-left image for this product
+},
+{
+  name: "GP11 Shooter USB Gamepad",
+  price: "$600",
+  rating: 4.5,
+  reviews: 55,
+  img: "../assets/Shooter USB.png",
+  category: "Gaming",
+  smallImg: "../Assets/red and black.png", // Small image
+  topLeftImg: "../Assets/New Button.png" // Example top-left image for this product
+},
+{
+  name: "Quilted Satin Jacket",
+  price: "$660",
+  rating: 4.5,
+  reviews: 55,
+  img: "../assets/Frame 608.png",
+  category: "dress",
+  smallImg: "../Assets/green and orange.png", // Small image
+  topLeftImg: "../Assets/New Button.png" // Example top-left image for this product
+}
+
 ];
 
   
@@ -127,6 +173,9 @@ generateCategoryList();
 
 // Initially display all products (up to 8)
 displayProducts();
+
+
+
 
 
   

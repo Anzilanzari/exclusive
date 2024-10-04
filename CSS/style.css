@@ -559,7 +559,7 @@ font-size: 14px;
 font-weight: 600;
 line-height: 21px;
 text-align: left;
-color:darkcyan;
+color:#8b8a8a;
 }
 .rate{
     
@@ -575,7 +575,7 @@ color: #DB4444;
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-    gap: 30px;
+    gap: 35px;
     margin-bottom: 35px;
 }
 .new{
