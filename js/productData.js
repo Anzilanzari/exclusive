@@ -172,13 +172,14 @@ const newProducts = [
 ];
 
 // allNewProducts.js
-// allNewProducts.js
-const newProductContainer = document.getElementById('newProductContainer');
-
-const displayNewProducts = () => {
-    newProducts.forEach(product => {
+// Function to display products
+const displayFilteredProducts = (products, containerId) => {
+    const productContainer = document.getElementById(containerId);
+    productContainer.innerHTML = ''; // Clear previous products
+    
+    products.forEach(product => {
         const li = document.createElement('li');
-        li.classList.add('product-item', 'new-product-item'); // New class for styling
+        li.classList.add('product-item');
 
         li.innerHTML = `
             <div class="bg-wrap">
@@ -199,20 +200,14 @@ const displayNewProducts = () => {
             </div>
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
-                <div class="pricing"> <!-- Wrapper for pricing elements -->
-                    <div class="new-price">${product.price}</div>
-                    <div class="old-price-wrapper"> <!-- Wrapper for old price -->
-                        <hr class="old-price-line" />
-                        <span class="old-price">${product.oldPrice}</span>
-                    </div>
-                </div>
-                <div class="rating"> <!-- Separate wrapper for rating and reviews -->
+                <div class="rating">
+                    <div class="rate">${product.price}</div>
                     <div class="star-rate">
                         ${'<img src="../assets/Vector.svg" alt="Filled Star" class="star-image" />'.repeat(Math.floor(product.rating))}
                         ${product.rating % 1 !== 0 ? '<img src="../assets/Vector2.svg" alt="Half Star" class="star-image" />' : ''}
                         ${'<img src="../assets/Vector1.svg" alt="Empty Star" class="star-image" />'.repeat(5 - Math.ceil(product.rating))}
                     </div>
-                    <div class="review">(${product.reviews})</div> <!-- Review on the next line -->
+                    <div class="review">(${product.reviews})</div>
                 </div>
             </div>
             ${product.smallImg ? `
@@ -220,12 +215,34 @@ const displayNewProducts = () => {
                 <img src="${product.smallImg}" alt="Small Image" class="small-image"/>
             </div>` : ''}
         `;
-        newProductContainer.appendChild(li);
+        productContainer.appendChild(li);
     });
 };
 
-// Display all new products on page load
-displayNewProducts();
+// Function to filter products by name or category
+const filterProducts = (searchTerm, productArray) => {
+    const lowercasedTerm = searchTerm.toLowerCase();
+    return productArray.filter(product => 
+        product.name.toLowerCase().includes(lowercasedTerm) || 
+        product.category.toLowerCase().includes(lowercasedTerm)
+    );
+};
+
+// Event listener for search input
+document.getElementById('search').addEventListener('input', function () {
+    const searchTerm = this.value;
+    
+    // Filter and display products
+    const filteredProducts = filterProducts(searchTerm, products);
+    displayFilteredProducts(filteredProducts, 'productContainer1');
+    
+    const filteredNewProducts = filterProducts(searchTerm, newProducts);
+    displayFilteredProducts(filteredNewProducts, 'newProductContainer');
+});
+
+// Initial display of products
+displayFilteredProducts(products, 'productContainer1');
+displayFilteredProducts(newProducts, 'newProductContainer');
 
 
 
