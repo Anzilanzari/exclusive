@@ -29,6 +29,10 @@ hamburger.addEventListener('click',()=>{
     hamburger.classList.toggle("active")
     menu.classList.toggle("active")
 })
+function toShow() {
+  // Change the URL path to your desired page
+  window.location.href = 'HTML/Index.html';
+}
         
 const allProduct=[
     {
@@ -660,3 +664,5 @@ for (let i=0; i<cartButton.length;i++)
 
        
                                   // Cart Count
+                                  
+
