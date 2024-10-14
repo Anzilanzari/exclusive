@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../Assets/logo.png" width="32" height="32">
+    <link rel="icon" href="../Assets/mobile.png" sizes="32x32">
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/index.css">
-
     <title>Exclusive</title>
 </head>
 <body>
 
+                    
                                      <!-- Top Header -->
 
     <section id="top-header"> 
@@ -18,9 +17,25 @@
             <div class="top-container">
                 <div class="top-inner">
                     <div class="top-offer">
-                        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href=""><b>ShopNow</b></a>
+                        Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href="#"><b>ShopNow</b></a>
                     </div>
-                    <div class="top-language"><div>English</div><img src="../Assets/short-arrow-down.svg" alt="short-arrow-down.svg"/> </div>
+                    <div class="language-div">
+                        <div class="top-language">
+                            <div class="eng">English</div>
+                            <img src="../Assets/short-arrow-down.svg" alt="short-arrow-down.svg"/ class="down-arrow"> 
+                        </div>
+                        <div class="lang-down">
+                            <ul class="lang-list">
+                                <li class="lang">English</li>
+                                <li class="lang">Malayalam</li>
+                                <li class="lang">Hindi</li>
+                                <li class="lang">Tamil</li>
+                                <li class="lang">Kannada</li>
+                                <li class="lang">Telugu</li>
+                                <li class="lang">Bengali</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,35 +46,55 @@
                                      <!-- Header -->
 
     <section id="navbar">
-        <section class="wrapper">
-            <header>
-                <div class="left-part">
-                    <h1 class="logo"><a href="">Exclusive</a></h1>
-                    <ul class="nav">
-                        <li class="nav-list" id="home-back" onclick="toShow()"><a href="index.html">Home</a></li>
-                        <li class="nav-list"><a href="#">Contact</a></li>
-                        <li class="nav-list"><a href="#">About</a></li>
-                        <li class="nav-list"><a href="#">Sign Up</a> </li>
-                    </ul>
-                </div>
-                <div class="right-part">
-                    <div class="search-box">
-                        <input id="search" type="search" placeholder="What are you looking for?"/>
-                        <div class="place-wrap">
-                            <img src="/Assets/search.svg" alt="search.svg" class="search-icon"/>
+        <div class="nav-inner">
+            <section class="wrapper">
+                <header>
+                    <div class="left-part">
+                        <h1 class="logo"><a href="">Exclusive</a></h1>
+                        <ul class="nav">
+                            <li class="nav-list" id="home-back" onclick="toShow()"><a href="http://127.0.0.1:5501/Exclusive/HTML/Index.html">Home</a></li>
+                            <li class="nav-list"><a href="#">Contact</a></li>
+                            <li class="nav-list"><a href="#">About</a></li>
+                            <li class="nav-list"><a href="#">Sign Up</a> </li>
+                        </ul>
+                    </div>
+                    <div class="right-part">
+                        <div class="search-box">
+                            <input id="search" type="search" placeholder="What are you looking for?"/>
+                            <div class="place-wrap">
+                                <img src="/Assets/search.svg" alt="search.svg" class="search-icon"/>
+                            </div>
+                        </div>
+                        <div class="right-png">
+                            <div class="drop-menu">
+                                <ul class="line-list">
+                                    <li class="line1"></li>
+                                    <li class="line2"></li>
+                                    <li class="line3"></li>
+                                </ul>
+                            </div>
+                            <img src="/Assets/search.svg" alt="search.svg" class="search-svg"/>
+                            <img src="../Assets/wishlist.svg" alt="wishlist.svg" class="fav-icon"/>
+                            <div class="cart-div">
+                               <img src="../Assets/Cart.svg" alt="cart.svg" class="cart-icon"/>
+                               <div class="cart-product" id="product-count">0</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="right-png">
-                        <img src="../Assets/menu-symbol-of-three-parallel-lines-svgrepo-com.svg" alt="menu.svg" class="menu-svg"/>
-                        <img src="/Assets/search.svg" alt="search.svg" class="search-svg"/>
-                        <img src="../Assets/wishlist.svg" alt="wishlist.svg" class="fav-icon"/>
-                        <img src="../Assets/Cart.svg" alt="cart.svg" class="cart-icon"/>
-                    </div>
-                </div>
-            </header>
-        </section>
+                </header>
+            </section>
+        </div>
+        <div class="menu-wrap">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="http://127.0.0.1:5501/Exclusive/HTML/Index.html">Home</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+                <li class="menu-item"><a href="#">About</a></li>
+                <li class="menu-item"><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
     </section>
 
+                                        <!-- Header -->
                                         <!-- Header -->
 
                          <!-- Hidden -->
@@ -67,20 +102,15 @@
     <section class="wrapper">
         <div class="hidden-container">
             <div class="home-path" id="home-path" onclick="toShow()">
-            <a href="index.html">Home</a> / <span>Products</span>
+                Home / <span>Products</span>
             </div>
-            <div id="productContainer1" class="product-list"></div>
-            <div id="newProductContainer" class="product-grid">
-                    <!-- New product cards will be generated here -->
-            </div>
-            <div id="productContainer2" class="product-list"></div>
-
+            <div class="result"></div>
+            <ul class="product-list">
             
-            
-            
+            </ul>
+        </div>   
+    </section>
 </section>
-
-
                                         <!-- Hidden -->
 
                                       <!-- Footer -->
@@ -148,7 +178,9 @@
         </div>
     </footer>
 </section>
-<script src="js/productData.js"></script>
-
+                        
+                                 <!-- Footer -->
+<script src="../JS/index redirect.js"></script>
+                                      
 </body>
 </html>
